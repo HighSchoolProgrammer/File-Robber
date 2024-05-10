@@ -9,3 +9,6 @@ If the device is unplugged, upon replug, the script will continue and repair any
 ### Cloud Scan
 Cloud Scan detects any cloud service and copies the files from the cloud as well as the local files.
 NOTE: Currently only works with OneDrive
+
+### WIFI Stealer
+Saves all of the saved WIFI passwords on the victim's computer to a text file.
