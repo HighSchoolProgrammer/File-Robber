@@ -22,7 +22,7 @@ if not exist "%scriptdir%\%outputfolder%" (
 REM List of source folders to copy from
 set "folders=Documents Pictures Downloads Desktop"
 
-echo Starting File Robber...
+echo Starting File Robber... 
 echo --------------------------------------------------------------------
 echo --------------------------------------------------------------------
 echo FILE ROBBER V1.0
