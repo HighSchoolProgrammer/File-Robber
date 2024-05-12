@@ -12,7 +12,7 @@ Cloud Scan detects any cloud service and copies the files from the cloud as well
 NOTE: Currently only works with OneDrive
 
 ## Upcoming Features
-- Version checker that auto-runs with the script to ensure that you are running the latest version.
+- Version checker that auto-runs with the script to ensure that you are running the latest version
 - Auto update via script
 - Add Cloud Scan functionality for Google Drive
 - Add Cloud Scan functionality for Dropbox
