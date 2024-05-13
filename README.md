@@ -12,15 +12,15 @@ Cloud Scan detects any cloud service and copies the files from the cloud as well
 NOTE: Currently only works with OneDrive
 
 ## Upcoming Features
-- Version checker that auto-runs with the script to ensure that you are running the latest version
-- Auto update via script
-- Add Cloud Scan functionality for Google Drive
-- Add Cloud Scan functionality for Dropbox
-- Plugins (basically making extra optional features that can be installed seperately)
-- Onboarding Setup Built-in
-- Custom Installer (No iexpress installer)
-- GitHub Wiki
-- Better UI (VBS)
-- Better File/Folder Organisation
-- Add back USB Autorun (Low chance because AutoRun was discontinued in Windows 7)
-- Change Scripting to Python (Very low chance as this program is built natively in batchfile)
+- [ ] Version checker that auto-runs with the script to ensure that you are running the latest version
+- [ ] Auto update via script
+- [ ] Add Cloud Scan functionality for Google Drive
+- [ ] Add Cloud Scan functionality for Dropbox
+- [ ] Plugins (basically making extra optional features that can be installed seperately)
+- [ ] Onboarding Setup Built-in
+- [ ] Custom Installer (No iexpress installer)
+- [ ] GitHub Wiki
+- [ ] Better UI (VBS)
+- [x] ~~Better File/Folder Organisation~~
+- [ ] Add back USB Autorun (Low chance because AutoRun was discontinued in Windows 7)
+- [ ] Change Scripting to Python (Very low chance as this program is built natively in batchfile)
