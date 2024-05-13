@@ -24,3 +24,6 @@ NOTE: Currently only works with OneDrive
 - [x] ~~Better File/Folder Organisation~~
 - [ ] Add back USB Autorun (Low chance because AutoRun was discontinued in Windows 7)
 - [ ] Change Scripting to Python (Very low chance as this program is built natively in batchfile)
+
+## Credits
+- InstallForge - Custom Installer
