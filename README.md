@@ -18,7 +18,7 @@ NOTE: Currently only works with OneDrive
 - [x] ~~Add Cloud Scan functionality for Dropbox~~
 - [ ] Plugins (basically making extra optional features that can be installed seperately)
 - [ ] Onboarding Setup Built-in
-- [ ] Custom Installer (No iexpress installer)
+- [x] ~~Custom Installer (No iexpress installer)~~
 - [ ] GitHub Wiki
 - [ ] Search History Downloader
 - [ ] Script Customization
