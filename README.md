@@ -1,5 +1,5 @@
 # File Robber (BETA)
-A Batch Script that copies specified folders and files to a folder or USB Drive. This app's purpose is to quickly copy the victim's important files to a USB drive or folder. It can also do a number of things such as save any passwords on the system to the USB Drive, or set up a remote connection to the victim's computer.
+A Batch Script that copies specified folders and files to a folder or USB Drive. This app's purpose is to quickly copy the victim's important files to a USB drive or folder. It can also do a number of things such as save any passwords on the system to the USB Drive, or set up a remote connection to the victim's computer. 
 **THIS IS STILL IN BETA!!**
 
 ## Features
@@ -14,12 +14,14 @@ NOTE: Currently only works with OneDrive
 ## Upcoming Features
 - [ ] Version checker that auto-runs with the script to ensure that you are running the latest version
 - [ ] Auto update via script
-- [ ] Add Cloud Scan functionality for Google Drive
-- [ ] Add Cloud Scan functionality for Dropbox
+- [x] ~~Add Cloud Scan functionality for Google Drive~~
+- [x] ~~Add Cloud Scan functionality for Dropbox~~
 - [ ] Plugins (basically making extra optional features that can be installed seperately)
 - [ ] Onboarding Setup Built-in
 - [ ] Custom Installer (No iexpress installer)
 - [ ] GitHub Wiki
+- [ ] Search History Downloader
+- [ ] Script Customization
 - [ ] Better UI (VBS)
 - [x] ~~Better File/Folder Organisation~~
 - [ ] Add back USB Autorun (Low chance because AutoRun was discontinued in Windows 7)

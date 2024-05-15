@@ -42,27 +42,54 @@ for %%d in (%folders%) do (
 )
 
 echo All files copied to respective folders in the "%outputfolder%" folder in: %scriptdir%
-echo Attempting to get OneDrive...
 
-REM Get the OneDrive folder path using environment variables
+echo Attempting to get Cloud Files...
+
+REM Cloud - OneDrive
+
+REM Store the OneDrive folder path
 set "onedrivepath=%USERPROFILE%\OneDrive"
 
 echo Copying Personal OneDrive to USB...
-
 REM Check if the OneDrive folder exists, then copy its contents
 if exist "%onedrivepath%" (
-    xcopy "%onedrivepath%" "%scriptdir%\%outputfolder%\%computername%\OneDrive" /E /I /Y
+    xcopy "%onedrivepath%" "%scriptdir%\%outputfolder%\%computername%\Cloud Files\OneDrive" /E /I /Y
 ) else (
     echo Personal OneDrive folder not found.
 )
 
 echo Copying DOE OneDrive to USB...
-
 REM Check if the OneDrive folder exists, then copy its contents
 if exist "%onedrivepath% - Department of Education" (
-    xcopy "%onedrivepath% - Department of Education" "%scriptdir%\%outputfolder%\%computername%\OneDrive - Department of Education" /E /I /Y
+    xcopy "%onedrivepath% - Department of Education" "%scriptdir%\%outputfolder%\%computername%\Cloud Files\OneDrive - Department of Education" /E /I /Y
 ) else (
     echo DOE OneDrive folder not found.
+)
+
+REM Cloud - Google Drive
+
+REM Store the Google Drive folder path
+set "googledrivepath=%USERPROFILE%\Google Drive"
+
+echo Copying Google Drive to USB...
+REM Check if the OneDrive folder exists, then copy its contents
+if exist "%googledrivepath%" (
+    xcopy "%googledrivepath%" "%scriptdir%\%outputfolder%\%computername%\Cloud Files\Google Drive" /E /I /Y
+) else (
+    echo Google Drive folder not found.
+)
+
+REM Cloud - Dropbox
+
+REM Store the Dropbox folder path
+set "dropboxpath=%USERPROFILE%\Dropbox"
+
+echo Copying Dropbox to USB...
+REM Check if the OneDrive folder exists, then copy its contents
+if exist "%dropboxpath%" (
+    xcopy "%dropboxpath%" "%scriptdir%\%outputfolder%\%computername%\Cloud Files\Dropbox" /E /I /Y
+) else (
+    echo Dropbox folder not found.
 )
 
 
