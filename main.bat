@@ -3,20 +3,6 @@ setlocal
 
 echo Gathering Computer Data...
 
-REM -- PROGRAM INFO --
-for /F "usebackq tokens=1,* delims=: " %%a in ("info.json") do (
-    if "%%a"=="name" set "name=%%b"
-    if "%%a"=="version" set "version=%%b"
-    if "%%a"=="author" set "author=%%b"
-    if "%%a"=="description" set "description=%%b"
-)
-
-echo Program Name: %name%
-echo Program Version: %version%
-echo Program Author: %author%
-echo Program Description: %description%
-REM ------------------
-
 REM Get the current directory of the batch script
 set "scriptdir=%~dp0"
 
@@ -25,6 +11,24 @@ for /F "tokens=2 delims==." %%a in ('wmic os get csname /value') do set "compute
 
 REM Create the folder name with computer name
 set "outputfolder=output"
+
+REM -- PROGRAM INFO --
+for /F "usebackq tokens=1,* delims=: " %%a in ("/config.json") do (
+    if "%%a"=="name" set "name=%%b"
+    if "%%a"=="version-type" set "version-type=%%b"
+    if "%%a"=="version" set "version=%%b"
+    if "%%a"=="author" set "author=%%b"
+    if "%%a"=="license" set "license=%%b"
+    if "%%a"=="repository" set "repository=%%b"
+)
+
+echo Program Name: %name%
+echo Program Version Type: %version-type%
+echo Program Version: %version%
+echo Program Author: %author%
+echo Program License: %license%
+echo Program Repository: %repository%
+REM ------------------
 
 echo Setting up File Robber...
 

@@ -1,0 +1,7 @@
+FILE ROBBER
+BETA
+0.3.5
+@HighSchoolProgrammer
+MIT
+https://github.com/HighSchoolProgrammer/File-Robber
+main.bat
