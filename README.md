@@ -11,7 +11,6 @@ If the device is unplugged, upon replug, the script will continue and repair any
 
 ### Cloud Scan
 Cloud Scan detects any cloud service and copies the files from the cloud as well as the local files.
-NOTE: Currently only works with OneDrive
 
 ## Upcoming Features
 - [ ] Version checker that auto-runs with the script to ensure that you are running the latest version
