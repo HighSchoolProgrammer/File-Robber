@@ -1,9 +1,11 @@
 {
     "name": "File Robber",
-    "version-type": "BETA",
+    "version-type": "STABLE",
     "version": "0.3.5",
     "author": "@HighSchoolProgrammer",
-    "license": "MIT",
+    "license": "CC BY-ND 4.0",
+    "license-description": "File Robber by @HighSchoolProgrammer is licensed under CC BY-ND 4.0",
     "repository": "https://github.com/HighSchoolProgrammer/File-Robber",
-    "main": "main.bat"
+    "launcher": "start.bat",
+    "main": "main.py"
 }
