@@ -2,7 +2,7 @@
 A Batch Script that copies specified folders and files to a folder or USB Drive. This app's purpose is to quickly copy the victim's important files to a USB drive or folder. It can also do a number of things such as save any passwords on the system to the USB Drive, or set up a remote connection to the victim's computer. 
 **THIS IS STILL IN BETA!!**
 
-# NOTE: Currently working on converting to python
+# NOTE: THIS IS NOW A LEGACY PROJECT
 
 ## Features
 ### Unplug Guard
